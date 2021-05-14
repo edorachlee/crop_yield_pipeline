@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_becc9255b63d4b64b371f9fb0bb24b0d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_becc9255b63d4b64b371f9fb0bb24b0d" ></div>
+        
+</body>
+<script>    
+    
+            var map_becc9255b63d4b64b371f9fb0bb24b0d = L.map(
+                "map_becc9255b63d4b64b371f9fb0bb24b0d",
+                {
+                    center: [40.366, -91.5112],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dbbf2a9f32e446f1b151fc0e7196a959 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+            var circle_marker_ad7fbaeeef6d4480ba1c6d329cfa822a = L.circleMarker(
+                [39.8931, -94.4047],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.173366166110537, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_59585e17b9034013ac8695f5e9f6fccf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff09bc01a5de446a8ea71e487aef3e44 = $(`<div id="html_ff09bc01a5de446a8ea71e487aef3e44" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 110,778,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_59585e17b9034013ac8695f5e9f6fccf.setContent(html_ff09bc01a5de446a8ea71e487aef3e44);
+        
+
+        circle_marker_ad7fbaeeef6d4480ba1c6d329cfa822a.bindPopup(popup_59585e17b9034013ac8695f5e9f6fccf)
+        ;
+
+        
+    
+    
+            var circle_marker_23ef5243edec437e8d4d7732356f59f1 = L.circleMarker(
+                [38.4604, -91.8617],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.155130081515036, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_2812a4b0ca7b42909695ca573f32528a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c0f7126ea154c26a07393f4e6520dc8 = $(`<div id="html_7c0f7126ea154c26a07393f4e6520dc8" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 47,777,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_2812a4b0ca7b42909695ca573f32528a.setContent(html_7c0f7126ea154c26a07393f4e6520dc8);
+        
+
+        circle_marker_23ef5243edec437e8d4d7732356f59f1.bindPopup(popup_2812a4b0ca7b42909695ca573f32528a)
+        ;
+
+        
+    
+    
+            var circle_marker_b33a8a49c4164b4c88ae442d580e77b1 = L.circleMarker(
+                [39.8059, -91.6223],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.726695874424209, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_c3e332768c95407182342b043221aed6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4c7a0585aebb485da542b1e5076653e1 = $(`<div id="html_4c7a0585aebb485da542b1e5076653e1" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 80,581,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_c3e332768c95407182342b043221aed6.setContent(html_4c7a0585aebb485da542b1e5076653e1);
+        
+
+        circle_marker_b33a8a49c4164b4c88ae442d580e77b1.bindPopup(popup_c3e332768c95407182342b043221aed6)
+        ;
+
+        
+    
+    
+            var circle_marker_168507e6bb0a4108958a59490cce02e0 = L.circleMarker(
+                [38.2572, -94.34],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.613703053400371, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_61ed5033c81644a0a7751d8ceaf16e9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9862ae833c214c5ea0d2f7809a948a53 = $(`<div id="html_9862ae833c214c5ea0d2f7809a948a53" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 57,349,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_61ed5033c81644a0a7751d8ceaf16e9f.setContent(html_9862ae833c214c5ea0d2f7809a948a53);
+        
+
+        circle_marker_168507e6bb0a4108958a59490cce02e0.bindPopup(popup_61ed5033c81644a0a7751d8ceaf16e9f)
+        ;
+
+        
+    
+    
+            var circle_marker_509bd29b52cd4d5d819e5a3d895bd6e6 = L.circleMarker(
+                [38.2144, -92.4283],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.058478593620125, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_7026d172ee254723b52e824147496c20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ead66c6e8d5343daaaf7ea13fd6e966a = $(`<div id="html_ead66c6e8d5343daaaf7ea13fd6e966a" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 66,633,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_7026d172ee254723b52e824147496c20.setContent(html_ead66c6e8d5343daaaf7ea13fd6e966a);
+        
+
+        circle_marker_509bd29b52cd4d5d819e5a3d895bd6e6.bindPopup(popup_7026d172ee254723b52e824147496c20)
+        ;
+
+        
+    
+    
+            var circle_marker_6fe532e4cdf64d6aae6177598e67f06f = L.circleMarker(
+                [38.4108, -91.0752],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.044341016937784, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_c15cde464c7d4957952f70122d867523 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ff79ce216d1482aa13d6f8ee4572e03 = $(`<div id="html_1ff79ce216d1482aa13d6f8ee4572e03" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 24,591,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_c15cde464c7d4957952f70122d867523.setContent(html_1ff79ce216d1482aa13d6f8ee4572e03);
+        
+
+        circle_marker_6fe532e4cdf64d6aae6177598e67f06f.bindPopup(popup_c15cde464c7d4957952f70122d867523)
+        ;
+
+        
+    
+    
+            var circle_marker_295f61981c874779b4803ab3d39843f3 = L.circleMarker(
+                [37.1063, -93.8329],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.713681734452138, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_5db3723cac104cd5a2b1b7d84b1b7353 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96467870bcd047cf829d182bc4d5e0be = $(`<div id="html_96467870bcd047cf829d182bc4d5e0be" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 17,689,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_5db3723cac104cd5a2b1b7d84b1b7353.setContent(html_96467870bcd047cf829d182bc4d5e0be);
+        
+
+        circle_marker_295f61981c874779b4803ab3d39843f3.bindPopup(popup_5db3723cac104cd5a2b1b7d84b1b7353)
+        ;
+
+        
+    
+    
+            var circle_marker_6489a9c9a0de4a229acae9c6f368f65c = L.circleMarker(
+                [37.1573, -91.4005],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_5f2b8ed8fa344c7ba7fa7586c8a57388 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a533e6668fe44ecdb8d8313b4e68a156 = $(`<div id="html_a533e6668fe44ecdb8d8313b4e68a156" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 2,792,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_5f2b8ed8fa344c7ba7fa7586c8a57388.setContent(html_a533e6668fe44ecdb8d8313b4e68a156);
+        
+
+        circle_marker_6489a9c9a0de4a229acae9c6f368f65c.bindPopup(popup_5f2b8ed8fa344c7ba7fa7586c8a57388)
+        ;
+
+        
+    
+    
+            var circle_marker_a1aa9f8d88c8448cabb081b680e86bfe = L.circleMarker(
+                [36.5944, -89.6519],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.513623766076043, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_0c8b4ee114c04c8dbc8a2227e36c9df6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e72074731d4b4fc28a7568ba499e9fd7 = $(`<div id="html_e72074731d4b4fc28a7568ba499e9fd7" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 55,260,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_0c8b4ee114c04c8dbc8a2227e36c9df6.setContent(html_e72074731d4b4fc28a7568ba499e9fd7);
+        
+
+        circle_marker_a1aa9f8d88c8448cabb081b680e86bfe.bindPopup(popup_0c8b4ee114c04c8dbc8a2227e36c9df6)
+        ;
+
+        
+    
+    
+            var circle_marker_fb809efebb9c49c587caa1c776dc4eea = L.circleMarker(
+                [41.9333, -89.6167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.136692784374407, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_c52b1eea8caa416e83521bc6c5b3ec77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dea988d322e84f939b704b3a3092d1fa = $(`<div id="html_dea988d322e84f939b704b3a3092d1fa" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 318,747,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_c52b1eea8caa416e83521bc6c5b3ec77.setContent(html_dea988d322e84f939b704b3a3092d1fa);
+        
+
+        circle_marker_fb809efebb9c49c587caa1c776dc4eea.bindPopup(popup_c52b1eea8caa416e83521bc6c5b3ec77)
+        ;
+
+        
+    
+    
+            var circle_marker_8e18727d8c954a6dab2d0aee6a16f4d0 = L.circleMarker(
+                [42.15, -88.2333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.615676852652534, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_0c1c7430c66444d694bab58438e3dd02 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c814fb3cc18e4c709c6fb3210d906061 = $(`<div id="html_c814fb3cc18e4c709c6fb3210d906061" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 140,884,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_0c1c7430c66444d694bab58438e3dd02.setContent(html_c814fb3cc18e4c709c6fb3210d906061);
+        
+
+        circle_marker_8e18727d8c954a6dab2d0aee6a16f4d0.bindPopup(popup_0c1c7430c66444d694bab58438e3dd02)
+        ;
+
+        
+    
+    
+            var circle_marker_e6f6e7be45034eefbcbc2bdaee2a0129 = L.circleMarker(
+                [40.6333, -90.4333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.77890334372133, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_bd1965675f6a45c18e7c051880ef3dad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ef7c80ff1ab4bb1a005b1f71c199242 = $(`<div id="html_1ef7c80ff1ab4bb1a005b1f71c199242" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 186,038,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_bd1965675f6a45c18e7c051880ef3dad.setContent(html_1ef7c80ff1ab4bb1a005b1f71c199242);
+        
+
+        circle_marker_e6f6e7be45034eefbcbc2bdaee2a0129.bindPopup(popup_bd1965675f6a45c18e7c051880ef3dad)
+        ;
+
+        
+    
+    
+            var circle_marker_c8bc227dada244449bf8090c3e09faf1 = L.circleMarker(
+                [40.75, -89.2667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.802222440468633, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_68fb681844104112b3043133d3b6f32d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ba54f0cf0694085b12a5e15bdb81647 = $(`<div id="html_4ba54f0cf0694085b12a5e15bdb81647" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 290,892,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_68fb681844104112b3043133d3b6f32d.setContent(html_4ba54f0cf0694085b12a5e15bdb81647);
+        
+
+        circle_marker_c8bc227dada244449bf8090c3e09faf1.bindPopup(popup_68fb681844104112b3043133d3b6f32d)
+        ;
+
+        
+    
+    
+            var circle_marker_63a48d0892194cd2bb4dbf43fb1fa99f = L.circleMarker(
+                [41.5833, -87.5167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.811463845219645, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_590333c5fd634d25902623242dc4170f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de9a12275b984226ac92918ce6dc3a5a = $(`<div id="html_de9a12275b984226ac92918ce6dc3a5a" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 249,338,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_590333c5fd634d25902623242dc4170f.setContent(html_de9a12275b984226ac92918ce6dc3a5a);
+        
+
+        circle_marker_63a48d0892194cd2bb4dbf43fb1fa99f.bindPopup(popup_590333c5fd634d25902623242dc4170f)
+        ;
+
+        
+    
+    
+            var circle_marker_8db05ce72ef7434b81395a1ee2aca856 = L.circleMarker(
+                [39.5333, -89.7],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.337229830238893, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_0665841ee37d47a38311fd089c839b44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_708df7285d7446c2981cd5aa17b89d1f = $(`<div id="html_708df7285d7446c2981cd5aa17b89d1f" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 281,186,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_0665841ee37d47a38311fd089c839b44.setContent(html_708df7285d7446c2981cd5aa17b89d1f);
+        
+
+        circle_marker_8db05ce72ef7434b81395a1ee2aca856.bindPopup(popup_0665841ee37d47a38311fd089c839b44)
+        ;
+
+        
+    
+    
+            var circle_marker_5de0e04658c944349c7ad38df7782e50 = L.circleMarker(
+                [39.3833, -88.0],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.25386555648443, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_32bc9d531d2f4049a3fc5003917690bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2943a9e080746f7b26fe9e308abd8c9 = $(`<div id="html_f2943a9e080746f7b26fe9e308abd8c9" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 237,699,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_32bc9d531d2f4049a3fc5003917690bb.setContent(html_f2943a9e080746f7b26fe9e308abd8c9);
+        
+
+        circle_marker_5de0e04658c944349c7ad38df7782e50.bindPopup(popup_32bc9d531d2f4049a3fc5003917690bb)
+        ;
+
+        
+    
+    
+            var circle_marker_c32593980c524a26bb4db9c4e91fc79d = L.circleMarker(
+                [37.95, -89.15],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.259978585236269, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_210abdbb89d24155b72341d1f121f2e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27faeea2ce7143f481e382eddc09fde0 = $(`<div id="html_27faeea2ce7143f481e382eddc09fde0" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 70,839,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_210abdbb89d24155b72341d1f121f2e1.setContent(html_27faeea2ce7143f481e382eddc09fde0);
+        
+
+        circle_marker_c32593980c524a26bb4db9c4e91fc79d.bindPopup(popup_210abdbb89d24155b72341d1f121f2e1)
+        ;
+
+        
+    
+    
+            var circle_marker_9061616b95ae45388180d55be0fdd225 = L.circleMarker(
+                [38.25, -88.3667],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.247426755040493, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_adf14dfa899047c1bc36aaba2694f905 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3337e8649c84d8fbdb8de239d9ad9d7 = $(`<div id="html_d3337e8649c84d8fbdb8de239d9ad9d7" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 70,577,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_adf14dfa899047c1bc36aaba2694f905.setContent(html_d3337e8649c84d8fbdb8de239d9ad9d7);
+        
+
+        circle_marker_9061616b95ae45388180d55be0fdd225.bindPopup(popup_adf14dfa899047c1bc36aaba2694f905)
+        ;
+
+        
+    
+    
+            var circle_marker_587c47ea6ad340e2b462dc323c119fc8 = L.circleMarker(
+                [43.2667, -95.3833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.248897522929845, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_8d114e4689764d1d8e00c7351d65548e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21fcde2e823c4a83a520b173e6044cd2 = $(`<div id="html_21fcde2e823c4a83a520b173e6044cd2" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 362,836,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_8d114e4689764d1d8e00c7351d65548e.setContent(html_21fcde2e823c4a83a520b173e6044cd2);
+        
+
+        circle_marker_587c47ea6ad340e2b462dc323c119fc8.bindPopup(popup_8d114e4689764d1d8e00c7351d65548e)
+        ;
+
+        
+    
+    
+            var circle_marker_fddf9253b5514bc78acc2b202fa0f14d = L.circleMarker(
+                [43.25, -93.5],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.83140784106125, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_887869c409b7420eb79f99f21a00565e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b5699c71e7d4b18a6c2ca310987c17f = $(`<div id="html_1b5699c71e7d4b18a6c2ca310987c17f" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 374,995,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_887869c409b7420eb79f99f21a00565e.setContent(html_1b5699c71e7d4b18a6c2ca310987c17f);
+        
+
+        circle_marker_fddf9253b5514bc78acc2b202fa0f14d.bindPopup(popup_887869c409b7420eb79f99f21a00565e)
+        ;
+
+        
+    
+    
+            var circle_marker_35d601f9ba0a4625818a82cb4d9a18be = L.circleMarker(
+                [43.0833, -91.6],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.098967827551263, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_182f7c82ae6d451f839db0055be8fbde = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8397ce79d53549a6b540be9bb5f6a204 = $(`<div id="html_8397ce79d53549a6b540be9bb5f6a204" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 338,833,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_182f7c82ae6d451f839db0055be8fbde.setContent(html_8397ce79d53549a6b540be9bb5f6a204);
+        
+
+        circle_marker_35d601f9ba0a4625818a82cb4d9a18be.bindPopup(popup_182f7c82ae6d451f839db0055be8fbde)
+        ;
+
+        
+    
+    
+            var circle_marker_d4d8aa12e86443518ff12d255b1be95f = L.circleMarker(
+                [42.2167, -95.0833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_2d706656bda44990aae368b328f3d7c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77252c07737d4ee4866e30e7babca5b0 = $(`<div id="html_77252c07737d4ee4866e30e7babca5b0" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 420,261,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_2d706656bda44990aae368b328f3d7c3.setContent(html_77252c07737d4ee4866e30e7babca5b0);
+        
+
+        circle_marker_d4d8aa12e86443518ff12d255b1be95f.bindPopup(popup_2d706656bda44990aae368b328f3d7c3)
+        ;
+
+        
+    
+    
+            var circle_marker_537e382743be47e692025ee8ccd5c9ce = L.circleMarker(
+                [42.2167, -93.2333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.78927537134494, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_ab2bef358932416da9a9f4b76b898c92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ad13185f48d4a679c356c1b6db2c076 = $(`<div id="html_1ad13185f48d4a679c356c1b6db2c076" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 394,989,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_ab2bef358932416da9a9f4b76b898c92.setContent(html_1ad13185f48d4a679c356c1b6db2c076);
+        
+
+        circle_marker_537e382743be47e692025ee8ccd5c9ce.bindPopup(popup_ab2bef358932416da9a9f4b76b898c92)
+        ;
+
+        
+    
+    
+            var circle_marker_54429694d2b74c46b1bdae19ec3f05c0 = L.circleMarker(
+                [41.95, -90.8833],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.371984506634025, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_f8f565a29f0e46b1a3939dfa2f55023e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51cb380a24c84d71bd20cd7afaa0de08 = $(`<div id="html_51cb380a24c84d71bd20cd7afaa0de08" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 261,038,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_f8f565a29f0e46b1a3939dfa2f55023e.setContent(html_51cb380a24c84d71bd20cd7afaa0de08);
+        
+
+        circle_marker_54429694d2b74c46b1bdae19ec3f05c0.bindPopup(popup_f8f565a29f0e46b1a3939dfa2f55023e)
+        ;
+
+        
+    
+    
+            var circle_marker_461834ed91a74e739b13ef79fdb04132 = L.circleMarker(
+                [41.1667, -94.9333],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.264017208463383, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_857cbde9b4fc471bb4f335788d88d5f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc7f1c4ce5bb47c9aed1540e23dfb8cd = $(`<div id="html_bc7f1c4ce5bb47c9aed1540e23dfb8cd" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 196,164,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_857cbde9b4fc471bb4f335788d88d5f3.setContent(html_bc7f1c4ce5bb47c9aed1540e23dfb8cd);
+        
+
+        circle_marker_461834ed91a74e739b13ef79fdb04132.bindPopup(popup_857cbde9b4fc471bb4f335788d88d5f3)
+        ;
+
+        
+    
+    
+            var circle_marker_c758f6e8acd44b31853984ebeb0c18ab = L.circleMarker(
+                [41.1667, -93.55],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.808426493943262, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_ab502234777143ffb9226f97b818bf79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c75db6529b3458cbe65be1a7ebebcde = $(`<div id="html_2c75db6529b3458cbe65be1a7ebebcde" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 82,287,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_ab502234777143ffb9226f97b818bf79.setContent(html_2c75db6529b3458cbe65be1a7ebebcde);
+        
+
+        circle_marker_c758f6e8acd44b31853984ebeb0c18ab.bindPopup(popup_ab502234777143ffb9226f97b818bf79)
+        ;
+
+        
+    
+    
+            var circle_marker_367b8868774b44b8a32114357feea53b = L.circleMarker(
+                [41.1667, -91.7167],
+                {"bubblingMouseEvents": true, "color": "b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.172029539917936, "stroke": true, "weight": 3}
+            ).addTo(map_becc9255b63d4b64b371f9fb0bb24b0d);
+        
+    
+        var popup_0e48b29de5b44d3e86a44d5a579258e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6cc6021d8be4513af7cae7b102d5860 = $(`<div id="html_b6cc6021d8be4513af7cae7b102d5860" style="width: 100.0%; height: 100.0%;">Annual Yield(BU): 152,497,000   Avg. Min Air Temp.: 58.6   Avg. Max Air Temp.: 163.0   Avg. Min Soil Temp.: 72.6   Avg. Max Soil Temp.: 107.5   Avg. Precipitation: 28.8</div>`)[0];
+            popup_0e48b29de5b44d3e86a44d5a579258e9.setContent(html_b6cc6021d8be4513af7cae7b102d5860);
+        
+
+        circle_marker_367b8868774b44b8a32114357feea53b.bindPopup(popup_0e48b29de5b44d3e86a44d5a579258e9)
+        ;
+
+        
+    
+</script>
