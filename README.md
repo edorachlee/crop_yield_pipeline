@@ -4,6 +4,7 @@ Function:
  -Requests annual corn yields of each agricultural district in Missouri, Illinois, and Iowa.
  -Visualizes yield rates for specified year on a map using the Folium package, along with basic weather statistics.
  -Intended to be a skeleton pipeline to request basic information from NOAA and USDA that can be used to construct yield prediction models.
+ 
 Files:
  -NOAA.py: Contains parameters specific to querying NOAA weather database(currently hardcoded with list of states and features).
  -USDA.py: Similar to NOAA.py, but queries USDA database to request annual corn yield(also hardcoded with list of states and features).
