@@ -1,16 +1,16 @@
+import os
 import folium
 import webbrowser
 from sklearn.preprocessing import MinMaxScaler
-
+"""
+Overlays data onto Folium map and displays basic statistics calculated from pulled data.
+"""
 def display(df_NOAA, df_USDA):
     #min-max normalization for radius calculation
     df_USDA['Radius'] = MinMaxScaler(feature_range=(1,3)).fit_transform(
         df_USDA['Annual Yield(BU)'].str.replace(',', '').astype(float).values.reshape(-1,1))
 
-    print(df_USDA['Radius'])
-
     m = folium.Map(location=[40.3660, -91.5112], zoom_start = 6)
-
     for i in range(len(df_USDA.index)):
         folium.CircleMarker(
         df_USDA.loc[i, 'Coordinates'],
@@ -27,8 +27,7 @@ def display(df_NOAA, df_USDA):
         fill=True,
         fill_opacity=0.7
         ).add_to(m)
-
     m.save('map.html')
-    url = 'file:///Users/buggu/Desktop/info577/map.html'
+    url = 'file://'+os.getcwd()+'/map.html'
     webbrowser.open(url, new=2)
 
