@@ -17,4 +17,5 @@ Files:
   - Adding a time slider to the map to view yield rates across multiple years.
   - Flesh out data preprocessing steps.
   - Increase number of weather stations queried in NOAA database.
+  - Convert pipeline into workflow(e.g.Airflow)
 
