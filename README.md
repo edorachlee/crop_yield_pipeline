@@ -11,11 +11,12 @@ Files:
  - process_nan.py: A custom function to replace NaNs in NOAA data. Current method is to replace NaNs with column mean, which is pretty barebones. It has been intentionally separated from request_data.py for more robust preprocessing in the future.
  - request_data.py: Uses NOAA.py and USDA.py to request the specified data.
  - display.py: Overlays data onto Folium map and displays basic statistics.
- - main.py: Run this file to see results. **Set desired year for visualization in this file.**
+ - main.py: Run this script to see results. **Set desired year for visualization in this file.**
  
  Upcoming developments:
   - Adding a time slider to the map to view yield rates across multiple years.
   - Flesh out data preprocessing steps.
   - Increase number of weather stations queried in NOAA database.
-  - Convert pipeline into workflow(e.g.Airflow)
+  - Convert pipeline into workflow(e.g.Airflow).
+  - Prep data for PostGRES ingestion.
 
