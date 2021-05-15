@@ -1,18 +1,22 @@
-#Personal observations when creating this data pipeline
+# Personal observations when creating this data pipeline
 
-Preprocessing: Not much to do(scaling, normalization, etc.). However, replacing NaNs in NOAA data could be much more robust. For example, replacing a NaN value by the mean of the current month(and not the whole year) would be more reasonable.
-NOAA:
-1. Conflicting documentation(V1? V2?)
-2. Not all stations had features I was looking for (eg. Some stations would have weather and precipitation, but not soil data, and vice versa) - had to collect soil data from separate stations in the same state
-3. Regarding soil temps - hard to unify a standard: had different depths, different covering types(sod, bare ground, etc.)
-4. NOAA caps the maximum number of results in one call at 1000 results, so had to make multiple calls. One weird thing is that I’m unable to pull data for more than a year’s worth even though I’m very well under the results limit. So I’ve had to make separate calls for each year, for separate features.
-5. From NOAA, air temps were very low or high in improbable amounts. Thus it seems to me that the temperature of the sensor surface is measured, not the actual air temperature itself. I checked the distribution, and was left-skewed but did not seem to be wacky or anything.
-I quote weather.gov/lsx/excessiveheat-automobiles , “a dark dashboard or seat can easily reach temperatures in the range of 180 to more than 200 degrees F.” The same logic applies for cold temperatures.
-6. Some years are missing chunks of data
-7. Folium does not support newline operators in popup texts
+When I first started out on this project, I couldn't tell the difference between data science and data engineering...although the industry expectations for a data scientist seem to call for a sizeable amount of data engineering, so there's definitely some overlap. The good news is that now I have some idea of what data engineering is, hooray.
 
-Limitations: Currently, years can be changed but list of states is hardcoded, which detracts from modularity.
-Works up only until 2019, as USDA data has not been collected for 2020.
-Limited to one year only(did not add cumulative year function)
+This barebones pipeline pulls some basic data from the National Oceaninc and Atmospheric Administration(NOAA) and United States Department of Agriculture(USDA) using their respective APIs. I had initially intended to build a corn yield prediction model, but discovered that wearing the data engineer cap suits my interests better, and chose to concentrate on the pipeline construction itself. But that being said, constructing a toy yield prediction model off this pipeline is fairly simple if you know how to work with pandas and scikit-learn.
 
-openWeather API: Free student version only goes back one year for historical data - not much use!
+The current pipeline is limited to one-year period queries for daily air/soil temperature, precipitation, and annual agriculture district corn yield for MO, IL, and IA only. You can change the year, but not past 2019 as USDA has not published corn yield data for 2020 as of May 2021. I have no idea how far back you can go, but it seems in some states the USDA has data as far back as 30 years. The rest of the query parameters are hardcoded for now, but I'm trying to make the query more modular in the future. The Folium map produced currently does not support newline characters, so the marker popup texts are a bit difficult to read.
+
+Some observations I made during this project:
+ - NOAA:
+   1. Weather data is pretty tightly controlled. You won't find free data going back for more than a year except with NOAA. There's third-party APIs like openWeather which is pretty famous, but they have everything locked down under a pricing plan if you want historical weather data. Their free student version only goes back one year for historical data - not much use!
+   2. I found that the NOAA database had all the stuff I needed, but it's capped at 1000 results per query, which will quickly slow you down if you want to pull data for multiple years. One weird thing is that I’m unable to pull data for more than a year’s worth even though I’m very well under the results limit. So I’ve had to make separate calls for each year, for separate features.
+   3. Make sure to use their V2 API, not the V1. Their V1 documentation is the first thing that pops up in a Google search, so beware.
+   4. Though their API documentation is very good, I also found this article to be helpful in getting started: https://towardsdatascience.com/getting-weather-data-in-3-easy-steps-8dc10cc5c859#:~:text=In%20order%20to%20request%20data,the%20Request%20a%20Token%20website.&text=Fill%20in%20an%20email%20address,safe%20and%20keep%20it%20private
+   5. Not all weather stations had features I was looking for(eg. some stations would have weather and precipitation but not soil data, and vice versa). Also, soil temperatures were hard compare because measuring standards were sometimes different for each weather station(e.g. different soil depths, covering types, etc.). In the states I had selected(MO, IL, IA), there were literally only one or two weather stations with full, unified features for each state. I decided to collect data only from these weather stations for getting my project off the ground, but data aggregation from multiple weather stations in the same state is crucial for gaining representative weather data.
+   6. The air temperatures were off the charts, ranging -200F ~ 300F, which falls greatly outside the range of known human tolerance for cold/heat. This had me for a while, but I hypothesize that these temperatures represent the surface temperature of the thermometer itself, and not the surrounding air. I quote weather.gov/lsx/excessiveheat-automobiles, “a dark dashboard or seat can easily reach temperatures in the range of 180 to more than 200 degrees F.” The same logic applies for cold temperatures. I've also checked the distribution, and the temperatures aren't exactly a normal distribution but don't seem very odd either.
+   7. Preprocessing the data was somewhat challenging. Some weather stations are missing whole chunks of data due to various reasons, so I needed to make a decision between dropping big data chunks or replacing a large number of NaNs and diluting data information. Right now I just have the NaNs replaced with the feature mean, but obviously that isn't going to fly if you want a serious prediction model. This is one big area of improvement I'm working on right now. For example, replacing a NaN value by the mean of the current month(and not the whole year) would be more reasonable.
+   8. In terms of numerical preprocessing, there's not much to do(scaling, normalization, etc.) since air temps for all states are equally crazy, and precipitation data seem normal across the states.
+  
+ - USDA:
+   1. Their documentation isn't as good as NOAA's but the parameter explanations are pretty much straightforward. The interactive API is called NASS Quickstats and this is where you should be pulling the data from. Once you've filtered out the data you want from Quickstats, generating the query statement is as simple as copying-and-pasting the column selections you made in Quickstats.
+   2. Anything other than popular crops like corn and wheat will have chunks of data missing, so make sure to get a good feel for the data landscape of your desired crop/region.
