@@ -22,3 +22,4 @@ Files:
   - Convert pipeline into workflow(e.g.Airflow).
   - Prep data for PostGRES ingestion.
 
+Note: Performed as part of school work. Course number and instructor information have been omitted to prevent plagiarism.
